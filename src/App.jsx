@@ -81,24 +81,24 @@ function App() {
           
           </Route> */}
           
-        <Route path="/admin/login" Component={AdminLoginPage} />
-        <Route path="/admin/dashboard" Component={DashboardManagementPage} />
-        <Route path="/admin/specialization" Component={SpecializationManagementPage} />
-        <Route path="/admin/specialization/create" Component={CreateSpecializationPage} />
-        <Route path="/admin/specialization/edit/:specializationId" Component={EditSpecializationPage} />
-        <Route path="/admin/doctor" Component={DoctorManagementPage} />
-        <Route path="/admin/doctor-umum" Component={DoctorUmumManagementPage} />
-        <Route path="/admin/doctor/create" Component={CreateDoctorPage} />
-        <Route path="/admin/doctor/edit/:doctorId" Component={EditDoctorPage} />
-        <Route path="/admin/doctor-umum/create" Component={CreateDoctorUmumPage} />
-        <Route path="/admin/doctor-umum/edit/:doctorId" Component={EditDoctorUmumPage} />
-        <Route path="/admin/schedule/specialization" Component={ScheduleSpecializationManagementPage} />
-        <Route path="/admin/schedule/specialization/create" Component={CreateScheduleSpecializationPage} />
-        <Route path="/admin/schedule/specialization/edit/:scheduleSpecializationId" Component={EditScheduleSpecializationPage} />
-        <Route path="/admin/schedule/general" Component={ScheduleGeneralManagementPage} />
-        <Route path="/admin/schedule/general/create" Component={CreateScheduleGeneralPage} />
-        <Route path="/admin/schedule/general/edit/:scheduleGeneralId" Component={EditScheduleGeneralPage} />
-        <Route path="/admin/reservation" Component={ReservationManagementPage} />
+        <Route path="/admin-login" Component={AdminLoginPage} />
+        <Route path="/admin-dashboard" Component={DashboardManagementPage} />
+        <Route path="/admin-specialization" Component={SpecializationManagementPage} />
+        <Route path="/admin-specialization/create" Component={CreateSpecializationPage} />
+        <Route path="/admin-specialization/edit/:specializationId" Component={EditSpecializationPage} />
+        <Route path="/admin-doctor" Component={DoctorManagementPage} />
+        <Route path="/admin-doctor-umum" Component={DoctorUmumManagementPage} />
+        <Route path="/admin-doctor/create" Component={CreateDoctorPage} />
+        <Route path="/admin-doctor/edit/:doctorId" Component={EditDoctorPage} />
+        <Route path="/admin-doctor-umum/create" Component={CreateDoctorUmumPage} />
+        <Route path="/admin-doctor-umum/edit/:doctorId" Component={EditDoctorUmumPage} />
+        <Route path="/admin-schedule/specialization" Component={ScheduleSpecializationManagementPage} />
+        <Route path="/admin-schedule/specialization/create" Component={CreateScheduleSpecializationPage} />
+        <Route path="/admin-schedule/specialization/edit/:scheduleSpecializationId" Component={EditScheduleSpecializationPage} />
+        <Route path="/admin-schedule/general" Component={ScheduleGeneralManagementPage} />
+        <Route path="/admin-schedule/general/create" Component={CreateScheduleGeneralPage} />
+        <Route path="/admin-schedule/general/edit/:scheduleGeneralId" Component={EditScheduleGeneralPage} />
+        <Route path="/admin-reservation" Component={ReservationManagementPage} />
 
         <Route path="*" Component={NotFoundPage} />
       </Routes>
