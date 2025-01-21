@@ -25,7 +25,9 @@ import { parse, isWithinInterval } from "date-fns";
 function generateTimeIntervals(jamMulai, jamSelesai, intervalMinutes = 30) {
   // Convert the start and end times to Date objects
   const startTime = new Date(`1970-01-01T${jamMulai}Z`);
-  const endTime = new Date(`1970-01-01T${jamSelesai || '23:59'}Z`);
+  const endTime = new Date(`1970-01-01T${jamSelesai === 'Selesai' || !jamSelesai ? '23:59' : jamSelesai}Z`);
+
+  console.log({jamMulai, jamSelesai})
 
   const timeIntervals = [];
 
@@ -51,7 +53,9 @@ function generateTimeIntervals(jamMulai, jamSelesai, intervalMinutes = 30) {
 const getAllowedDays = (hari) => {
   const dayNames = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
 
-  if (hari.includes("-")) {
+  if(hari === 'Setiap Hari') {
+    return dayNames.map((v, index) => index)
+  } else if (hari.includes("-")) {
     // Handle range, e.g., "Senin - Kamis"
     const [startDay, endDay] = hari.split(" - ").map((d) => dayNames.indexOf(d.trim()));
     return Array.from({ length: 7 }, (_, i) => i).filter(
